@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class SpawnScript : MonoBehaviour
 {
-    public GameObject obj;
+    public GameObject[] obj;
+    public float spawnMin = 1f;
+    public float spawnMax = 2f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +20,8 @@ public class SpawnScript : MonoBehaviour
     void Spawn()
     {
 
-        Instantiate(obj, transform.position, Quaternion.identity);
-        Invoke("Spawn", Random.Range(1f, 2f));
+        Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
+        Invoke("Spawn", Random.Range(spawnMin, spawnMax));
 
     }
 
