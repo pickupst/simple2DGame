@@ -24,4 +24,11 @@ public class HudScript : MonoBehaviour
         scoreTect.text = "Score: " + (int) playerScore;
         
     }
+
+    public void IncScore(int amount)
+    {
+
+        playerScore += amount;
+
+    }
 }
