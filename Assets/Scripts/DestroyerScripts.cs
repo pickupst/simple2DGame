@@ -19,8 +19,8 @@ public class DestroyerScripts : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
-        { 
-
+        {
+            Application.LoadLevel(1);
             return;
         }
 

@@ -31,4 +31,9 @@ public class HudScript : MonoBehaviour
         playerScore += amount;
 
     }
+
+    private void OnDisable()
+    {
+        PlayerPrefs.SetInt("Score", (int) playerScore);
+    }
 }
